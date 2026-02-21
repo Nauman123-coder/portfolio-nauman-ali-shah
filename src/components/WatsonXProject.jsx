@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "./WatsonxProject.css";
+import "./WatsonXProject.css";
 
 const useInView = (threshold = 0.12) => {
   const ref = useRef(null);
