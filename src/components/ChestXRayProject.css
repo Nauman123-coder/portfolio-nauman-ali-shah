@@ -1,0 +1,366 @@
+/* src/components/ChestXRayProject.css */
+
+.chest-xray-page .project-wrapper {
+  background-color: #050816;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.chest-xray-page #starfield-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.chest-xray-page .ambient-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 30%, rgba(145, 94, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.chest-xray-page .content-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Navigation */
+.chest-xray-page nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 3rem 0;
+}
+
+.chest-xray-page .logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.chest-xray-page .logo span {
+  color: #aaa6c3;
+  font-weight: 400;
+}
+
+/* Hero */
+.chest-xray-page .hero {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.chest-xray-page .academic-tag {
+  color: #915eff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.chest-xray-page .hero h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  background: linear-gradient(to right, #fff, #915eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chest-xray-page .hero-img-container {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chest-xray-page .hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Centered button below image */
+.chest-xray-page .hero .btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: rgba(145, 94, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  border: 1px solid #915eff;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.chest-xray-page .hero .btn:hover {
+  background: rgba(145, 94, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(145, 94, 255, 0.3);
+}
+
+/* Sections */
+.chest-xray-page section {
+  padding: 6rem 12%;
+}
+
+.chest-xray-page .content-block {
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+}
+
+.chest-xray-page .section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #fff, #915eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.chest-xray-page p {
+  color: #aaa6c3;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Cards */
+.chest-xray-page .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.chest-xray-page .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.chest-xray-page .glass-card:hover {
+  transform: translateY(-5px);
+  border-color: #915eff;
+}
+
+.chest-xray-page .glass-card h3 {
+  color: #915eff;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+/* Lists */
+.chest-xray-page .clinical-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 800px;
+  margin: 1.5rem auto;
+}
+
+.chest-xray-page .clinical-list li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  color: #aaa6c3;
+}
+
+.chest-xray-page .clinical-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #915eff;
+  font-weight: bold;
+}
+
+/* Architecture */
+.chest-xray-page .arch-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.chest-xray-page .arch-image {
+  background: #100d25;
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.chest-xray-page .densenet-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: #915eff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.chest-xray-page .arch-visual-mock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.chest-xray-page .layer-block {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid rgba(145, 94, 255, 0.3);
+  text-align: center;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: rgba(145, 94, 255, 0.05);
+}
+
+.chest-xray-page .layer-block.accent {
+  background: rgba(145, 94, 255, 0.2);
+  border-color: #915eff;
+  font-weight: bold;
+}
+
+.chest-xray-page .connector {
+  width: 2px;
+  height: 20px;
+  background: #915eff;
+}
+
+/* Math */
+.chest-xray-page .math-wrapper {
+  background: #100d25;
+  padding: 2.5rem;
+  border-radius: 20px;
+  margin: 2rem 0;
+  border: 1px solid rgba(145, 94, 255, 0.2);
+  overflow-x: auto;
+  text-align: center;
+}
+
+.chest-xray-page .formula {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.chest-xray-page .formula-desc {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #aaa6c3;
+}
+
+/* GradCAM */
+.chest-xray-page .gradcam-box {
+  border-left: 4px solid #915eff;
+  padding-left: 1.5rem;
+  background: rgba(145, 94, 255, 0.05);
+  padding-top: 0.5rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0 12px 12px 0;
+  text-align: left;
+  max-width: 800px;
+  margin: 1.5rem auto;
+}
+
+/* CTA */
+.chest-xray-page .cta-section {
+  text-align: center;
+  padding: 6rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chest-xray-page .button-group {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.chest-xray-page .btn {
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.chest-xray-page .btn.primary {
+  background: #915eff;
+  color: #fff;
+}
+
+.chest-xray-page .btn.primary:hover {
+  background: #804dee;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(145, 94, 255, 0.3);
+}
+
+.chest-xray-page .btn.secondary {
+  border: 1px solid #915eff;
+  color: #fff;
+}
+
+.chest-xray-page .btn.secondary:hover {
+  background: rgba(145, 94, 255, 0.1);
+}
+
+/* Footer */
+.chest-xray-page footer {
+  text-align: center;
+  padding: 4rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chest-xray-page .arch-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .chest-xray-page .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .chest-xray-page .section-title {
+    font-size: 1.8rem;
+  }
+}

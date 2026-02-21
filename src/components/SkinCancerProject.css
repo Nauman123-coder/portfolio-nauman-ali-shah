@@ -1,0 +1,344 @@
+/* src/components/SkinCancerProject.css */
+
+.skin-cancer-page {
+  min-height: 100vh;
+  background-color: #0b0b15;
+  color: white;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.skin-cancer-page ::selection {
+  background: rgba(168, 85, 247, 0.3);
+}
+
+/* ── Navigation ──────────────────────────────────────────────── */
+.nav-bar {
+  display: flex;
+  justify-content: flex-start;     /* Logo at the left/start */
+  align-items: center;
+  padding: 1.5rem 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.highlight {
+  color: #a855f7;
+}
+
+/* ── Hero ────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  padding: 5rem 2rem 6rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;               /* Keeps title, subtitle & button centered */
+}
+
+.hero-title {
+  font-size: 3.75rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(to right, #c084fc, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #c084fc;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.pulse-icon {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Back to Portfolio button */
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn.secondary:hover {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: #a855f7;
+  transform: translateY(-2px);
+}
+
+/* ── Sections ────────────────────────────────────────────────── */
+.section {
+  padding: 5rem 2rem;
+}
+
+.section.overview {
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section.stats,
+.section.ai-insights {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.section.tables.dark {
+  background: #12121e;
+}
+
+.section.ai-insights {
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.section-title.center {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Grid layouts */
+.content-grid,
+.tables-grid {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .content-grid,
+  .tables-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.stats-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Overview content */
+.overview-text { }
+
+.overview-description {
+  color: #9ca3af;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #d1d5db;
+}
+
+.check-icon {
+  color: #a855f7;
+  flex-shrink: 0;
+}
+
+/* Image card */
+.image-card {
+  background: linear-gradient(to bottom right, rgba(168, 85, 247, 0.12), rgba(99, 102, 241, 0.12));
+  padding: 1.25rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+.image-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Stat cards */
+.stat-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: rgba(168, 85, 247, 0.4);
+  transform: translateY(-4px);
+}
+
+.stat-icon-wrapper {
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover .stat-icon-wrapper {
+  transform: scale(1.1);
+}
+
+.stat-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-desc {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.stat-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.stat-icon.purple { color: #c084fc; }
+.stat-icon.indigo { color: #818cf8; }
+
+/* Tables */
+.table-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.table-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.table-icon.indigo { color: #818cf8; }
+
+.table-wrapper {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.data-table thead {
+  background: rgba(255, 255, 255, 0.05);
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 1rem;
+}
+
+.data-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table-label {
+  font-weight: 500;
+  color: #d1d5db;
+}
+
+.table-value {
+  color: #c084fc;
+}
+
+/* Footer / CTA */
+.footer {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.footer-text {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+
+.cta-button {
+  background: #9333ea;
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #7e22ce;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.3);
+}

@@ -1,0 +1,453 @@
+/* src/components/BioSegNetProject.css */
+
+.biosegnet-page {
+  min-height: 100vh;
+  background: #0b0b15;
+  color: white;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.biosegnet-page ::selection {
+  background: rgba(168, 85, 247, 0.3);
+  color: white;
+}
+
+/* ── Background Glows & Starfield ───────────────────────────────── */
+.background-glows {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-circle {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.2;
+}
+
+.top-left {
+  top: -10%;
+  left: -10%;
+  background: #7e22ce;
+}
+
+.bottom-right {
+  bottom: -10%;
+  right: -10%;
+  background: #4f46e5;
+}
+
+.starfield-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 2rem 1.5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(to bottom right, #a855f7, #4f46e5);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.highlight {
+  color: #a855f7;
+  font-weight: 500;
+}
+
+/* ── Main Content ───────────────────────────────────────────────── */
+.main-content {
+  position: relative;
+  z-index: 10;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 6rem;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 12rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9ca3af;
+  font-weight: 500;
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+}
+
+.back-link:hover {
+  color: #a855f7;
+  transform: translateX(-4px);
+}
+
+.hero-title {
+  font-size: 3.75rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ffffff, #c084fc, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 2.25rem;
+  opacity: 0.9;
+  display: block;
+}
+
+.hero-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  color: #c084fc;
+  margin-bottom: 3rem;
+}
+
+.hero-image-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.03);
+}
+
+/* Sections */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title-line {
+  width: 2rem;
+  height: 4px;
+  background: #a855f7;
+  border-radius: 9999px;
+}
+
+.section-title.center {
+  justify-content: center;
+}
+
+.section-icon {
+  color: #a855f7;
+}
+
+/* Overview */
+.overview-section {
+  margin-bottom: 8rem;
+}
+
+.overview-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .overview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.overview-description p {
+  color: #d1d5db;
+  line-height: 1.8;
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+}
+
+.feature-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #e5e7eb;
+}
+
+.check-icon {
+  color: #a855f7;
+  flex-shrink: 0;
+}
+
+/* Make the Project Overview image smaller */
+.small-overview-image-container,
+.overview-image-container {
+  max-width: 480px;          /* ← controls overall size – adjust as needed (400px–600px range looks good) */
+  margin: 0 auto;            /* centers it nicely on mobile */
+}
+
+.overview-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+}
+
+/* Optional: make caption smaller too */
+.image-caption {
+  padding: 0.75rem;
+  font-size: 0.875rem;       /* slightly smaller text */
+  color: #9ca3af;
+}
+
+/* Optional: reduce glow effect for smaller image */
+.image-glow {
+  inset: -0.75rem;           /* smaller glow spread */
+  opacity: 0.5;
+}
+
+/* Architecture */
+.architecture-section {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  margin-bottom: 8rem;
+}
+
+.architecture-content {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.architecture-lead {
+  text-align: center;
+  color: #d1d5db;
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+}
+
+.architecture-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .architecture-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.arch-card {
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1rem;
+  transition: all 0.3s;
+}
+
+.arch-card:hover {
+  border-color: #a855f7;
+  transform: translateY(-4px);
+}
+
+.arch-icon {
+  color: #a855f7;
+  margin-bottom: 1rem;
+}
+
+.arch-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.arch-card p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Dataset */
+.dataset-section {
+  margin-bottom: 8rem;
+}
+
+.dataset-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .dataset-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.dataset-description {
+  color: #d1d5db;
+  line-height: 1.8;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.citation-box {
+  padding: 1.25rem;
+  background: rgba(168,85,247,0.1);
+  border-left: 4px solid #a855f7;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+  color: #c084fc;
+}
+
+.dataset-visuals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.visual-placeholder {
+  height: 10rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.raw {
+  background: #1e1b2e;
+  border: 1px solid #312e81;
+  color: #94a3b8;
+}
+
+.mask {
+  background: rgba(168,85,247,0.15);
+  border: 1px solid rgba(168,85,247,0.3);
+  color: #c084fc;
+}
+
+/* Impact */
+.impact-section {
+  max-width: 64rem;
+  margin: 0 auto 8rem;
+}
+
+.impact-text p {
+  color: #d1d5db;
+  line-height: 1.8;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding-top: 5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-subtitle {
+  color: #9ca3af;
+  margin-bottom: 2rem;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #7e22ce;
+  color: white;
+  padding: 1rem 2.25rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: all 0.3s;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(126, 34, 206, 0.3);
+}
+
+.github-button:hover {
+  background: #6d28d9;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(126, 34, 206, 0.4);
+}
+
+.github-button .rotate-180 {
+  transition: transform 0.3s;
+}
+
+.github-button:hover .rotate-180 {
+  transform: translateX(4px);
+}
